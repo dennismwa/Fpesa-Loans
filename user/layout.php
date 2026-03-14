@@ -18,13 +18,13 @@ require_once __DIR__ . '/../includes/header.php';
   <aside id="uSB" class="fixed lg:sticky top-0 left-0 h-screen w-[270px] bg-white border-r border-gray-100 z-40 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col overflow-y-auto">
     <div class="p-5 border-b border-gray-100">
       <a href="/" class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center"><span class="text-white font-bold font-heading">F</span></div>
+        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"><span class="text-white font-bold font-heading">F</span></div>
         <span class="text-lg font-bold grad-text font-heading"><?= e(site_name()) ?></span>
       </a>
     </div>
     <div class="p-4 border-b border-gray-100">
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center text-white font-bold text-sm"><?= strtoupper($_u['full_name'][0]) ?></div>
+        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm"><?= strtoupper($_u['full_name'][0]) ?></div>
         <div class="min-w-0"><div class="font-semibold text-sm truncate"><?= e($_u['full_name']) ?></div><div class="text-xs text-gray-400 truncate"><?= e($_u['email']) ?></div></div>
       </div>
     </div>
@@ -48,7 +48,7 @@ require_once __DIR__ . '/../includes/header.php';
       <?php endforeach; ?>
     </nav>
     <div class="p-3">
-      <div class="bg-gradient-to-br from-primary to-emerald-600 rounded-2xl p-4 text-white">
+      <div class="bg-primary rounded-2xl p-4 text-white">
         <div class="text-[11px] text-white/60 uppercase tracking-wider mb-1">Wallet Balance</div>
         <div class="text-xl font-bold font-heading"><?= fmt_money($_wbal) ?></div>
       </div>
