@@ -6,7 +6,7 @@ $txns = $db->prepare("SELECT * FROM wallet_transactions WHERE user_id=? ORDER BY
 $txns->execute([$_u['id']]); $txns = $txns->fetchAll();
 ?>
 
-<div class="bg-gradient-to-br from-primary to-emerald-600 rounded-3xl p-8 text-white mb-8" data-aos="fade-up">
+<div class="bg-primary rounded-3xl p-8 text-white mb-8" data-aos="fade-up">
   <div class="flex items-center justify-between">
     <div>
       <div class="text-sm text-white/60 mb-1">Available Balance</div>
