@@ -19,7 +19,7 @@ $recPay = $db->query("SELECT p.*, u.full_name FROM payments p JOIN users u ON p.
 <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
 <?php foreach ($s as $i=>$st): ?>
 <div class="bg-white rounded-2xl border border-gray-100 p-5 card-lift">
-  <div class="w-10 h-10 rounded-xl bg-gradient-to-br <?= $st[3] ?> flex items-center justify-center mb-3"><i data-lucide="<?= $st[2] ?>" class="w-5 h-5 text-white"></i></div>
+  <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center mb-3"><i data-lucide="<?= $st[2] ?>" class="w-5 h-5 text-white"></i></div>
   <div class="text-xl font-bold font-heading"><?= $st[1] ?></div>
   <div class="text-xs text-gray-400 mt-1"><?= $st[0] ?></div>
 </div>
