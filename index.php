@@ -11,7 +11,7 @@ $sn = site_name();
 ?>
 
 <!-- ══════ HERO ══════ -->
-<section class="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-emerald-50/30">
+<section class="relative min-h-screen flex items-center overflow-hidden bg-gray-50">
   <div class="blob w-[600px] h-[600px] bg-primary top-10 -left-48"></div>
   <div class="blob w-[400px] h-[400px] bg-secondary bottom-10 right-0 opacity-[.08]"></div>
   <div class="absolute inset-0 opacity-[.015]" style="background-image:radial-gradient(circle,<?= primary_color() ?> 1px,transparent 1px);background-size:28px 28px"></div>
@@ -62,7 +62,7 @@ $sn = site_name();
               <input type="range" id="hMon" min="1" max="36" value="12" class="w-full" oninput="hCalc()">
               <div class="flex justify-between text-xs text-gray-400 mt-1"><span>1 month</span><span class="font-bold text-primary text-base" id="hMonV">12 months</span><span>36</span></div>
             </div>
-            <div class="bg-gradient-to-r from-primary/[.04] to-emerald-50 rounded-2xl p-5">
+            <div class="bg-primary/5 rounded-2xl p-5">
               <div class="text-sm text-gray-500 mb-1">Monthly Payment</div>
               <div class="text-3xl font-extrabold grad-text font-heading" id="hEMI">KSH 9,456</div>
               <div class="flex gap-6 mt-2 text-xs text-gray-400">
@@ -72,14 +72,6 @@ $sn = site_name();
             </div>
             <a href="/pages/apply-loan.php" class="block w-full text-center btn-primary py-3.5 rounded-xl text-sm font-bold shadow-sm">Apply for This Loan</a>
           </div>
-        </div>
-
-        <!-- Floating badges -->
-        <div class="absolute -top-3 -right-3 bg-white rounded-2xl shadow-lg px-3.5 py-2.5 float-anim z-20 border border-gray-100/80">
-          <div class="flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-emerald-100 flex items-center justify-center"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i></div><div class="text-xs"><div class="font-bold text-emerald-700">Approved!</div><div class="text-gray-400 text-[10px]">Just now</div></div></div>
-        </div>
-        <div class="absolute -bottom-3 -left-3 bg-white rounded-2xl shadow-lg px-3.5 py-2.5 float-anim z-20 border border-gray-100/80" style="animation-delay:1.5s">
-          <div class="flex items-center gap-2"><div class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-primary"></i></div><div class="text-xs"><div class="font-bold">100% Secure</div><div class="text-gray-400 text-[10px]">256-bit SSL</div></div></div>
         </div>
       </div>
     </div>
@@ -116,7 +108,7 @@ $sn = site_name();
 </section>
 
 <!-- ══════ HOW IT WORKS ══════ -->
-<section class="py-24 bg-gradient-to-br from-gray-50 to-emerald-50/20 relative overflow-hidden" id="how-it-works">
+<section class="py-24 bg-gray-50 relative overflow-hidden" id="how-it-works">
   <div class="blob w-[500px] h-[500px] bg-primary -bottom-48 -left-48"></div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-16" data-aos="fade-up">
@@ -135,7 +127,7 @@ $sn = site_name();
       foreach($steps as $i=>$s): ?>
       <div data-aos="fade-up" data-aos-delay="<?= $i*100 ?>" class="relative text-center">
         <div class="relative inline-flex mb-6">
-          <div class="w-20 h-20 rounded-3xl bg-gradient-to-br <?= $s[3] ?> flex items-center justify-center shadow-lg"><i data-lucide="<?= $s[0] ?>" class="w-8 h-8 text-white"></i></div>
+          <div class="w-20 h-20 rounded-3xl bg-primary flex items-center justify-center shadow-lg"><i data-lucide="<?= $s[0] ?>" class="w-8 h-8 text-white"></i></div>
           <div class="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center font-bold text-sm text-primary font-heading"><?= $i+1 ?></div>
         </div>
         <h3 class="font-bold text-lg mb-2 font-heading"><?= $s[1] ?></h3>
@@ -171,7 +163,7 @@ $sn = site_name();
               <input type="range" id="cTer" min="1" max="60" value="12" class="w-full" oninput="cCalc()">
             </div>
           </div>
-          <div class="bg-gradient-to-br from-primary to-emerald-600 p-8 lg:p-10 text-white flex flex-col justify-center">
+          <div class="bg-primary p-8 lg:p-10 text-white flex flex-col justify-center">
             <div class="text-sm text-white/60 mb-1">Monthly Installment</div>
             <div class="text-4xl font-extrabold mb-6 font-heading" id="cEMI">KSH 9,456</div>
             <div class="space-y-4">
@@ -188,7 +180,7 @@ $sn = site_name();
 </section>
 
 <!-- ══════ BENEFITS + LIPA MDOGO MDOGO ══════ -->
-<section class="py-24 bg-gradient-to-br from-gray-50 to-white">
+<section class="py-24 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid lg:grid-cols-2 gap-16 items-center">
       <div data-aos="fade-right">
@@ -209,7 +201,7 @@ $sn = site_name();
 
       <!-- Lipa Mdogo Mdogo -->
       <div data-aos="fade-left">
-        <div class="bg-gradient-to-br from-primary to-emerald-600 rounded-3xl p-8 text-white">
+        <div class="bg-primary rounded-3xl p-8 text-white">
           <h3 class="text-2xl font-bold mb-4 font-heading">Lipa Mdogo Mdogo</h3>
           <p class="text-white/70 mb-6">Our installment model makes loan repayment easy. Pay small manageable amounts monthly without financial strain.</p>
           <div class="bg-white/10 rounded-2xl p-5 mb-4">
@@ -247,7 +239,7 @@ $sn = site_name();
         <div class="flex gap-0.5 mb-4"><?php for($s=0;$s<5;$s++): ?><i data-lucide="star" class="w-4 h-4 text-secondary fill-secondary"></i><?php endfor; ?></div>
         <p class="text-gray-600 text-sm leading-relaxed mb-6">"<?= $t[2] ?>"</p>
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center text-white font-bold text-sm"><?= $t[0][0] ?></div>
+          <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm"><?= $t[0][0] ?></div>
           <div><div class="font-bold text-sm"><?= $t[0] ?></div><div class="text-xs text-gray-400"><?= $t[1] ?></div></div>
         </div>
       </div>
@@ -290,8 +282,8 @@ $sn = site_name();
 
 <!-- ══════ CTA ══════ -->
 <section class="py-24 relative overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-primary to-emerald-600"></div>
-  <div class="absolute inset-0 opacity-[.07]" style="background-image:radial-gradient(circle,white 1px,transparent 1px);background-size:18px 18px"></div>
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image:url('/assets/images/breadcumb-services.png')"></div>
+  <div class="absolute inset-0 bg-primary/85"></div>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-aos="fade-up">
     <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 font-heading">Ready to Get Started?</h2>
     <p class="text-white/70 text-lg mb-10 max-w-xl mx-auto">Join thousands of Kenyans who trust <?= e($sn) ?> for their financial needs.</p>
