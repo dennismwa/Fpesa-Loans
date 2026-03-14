@@ -22,7 +22,7 @@ require_once __DIR__ . '/../includes/header.php';
 <div class="min-h-screen flex items-center justify-center bg-dark px-4">
   <div class="w-full max-w-md">
     <div class="text-center mb-8">
-      <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center mx-auto mb-4"><span class="text-white font-bold text-2xl font-heading">F</span></div>
+      <div class="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center mx-auto mb-4"><span class="text-white font-bold text-2xl font-heading">F</span></div>
       <h1 class="text-2xl font-bold text-white font-heading">Admin Panel</h1>
       <p class="text-sm text-gray-500"><?= e(site_name()) ?> Management</p>
     </div>
