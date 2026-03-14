@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'&&verify_csrf()){
 $presel=$_GET['type']??'';$page_title='Apply for a Loan';$page_description='Apply for fast loans online.';
 require_once __DIR__.'/../includes/header.php';require_once __DIR__.'/../includes/navbar.php';
 ?>
-<section class="pt-28 pb-20 bg-gradient-to-br from-gray-50 via-white to-emerald-50/20 min-h-screen">
+<section class="pt-28 pb-20 bg-gray-50 min-h-screen">
 <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="text-center mb-10" data-aos="fade-up"><h1 class="text-3xl font-extrabold mb-2 font-heading">Apply for a <span class="grad-text">Loan</span></h1><p class="text-gray-500">Processing fee: <strong class="text-primary"><?=fmt_money(app_fee())?></strong></p></div>
   <?php if($err):?><div class="bg-red-50 border-l-4 border-red-400 text-red-700 p-4 rounded-r-lg mb-6 text-sm"><?=e($err)?></div><?php endif;?>
@@ -42,7 +42,7 @@ require_once __DIR__.'/../includes/header.php';require_once __DIR__.'/../include
         <div><label class="text-sm font-bold text-gray-700 mb-2 flex justify-between">Amount <span class="text-primary text-xs" id="aRng"></span></label><input type="number" name="amount" id="lAmt" required class="finput w-full py-3 px-4 rounded-xl border border-gray-200 text-sm" placeholder="Enter amount" oninput="reCalc()"></div>
         <div><label class="text-sm font-bold text-gray-700 mb-2 flex justify-between">Term (months) <span class="text-primary text-xs" id="tRng"></span></label><input type="number" name="term_months" id="lTer" required class="finput w-full py-3 px-4 rounded-xl border border-gray-200 text-sm" placeholder="Months" oninput="reCalc()"></div>
       </div>
-      <div id="cPrev" class="bg-gradient-to-r from-primary/[.04] to-emerald-50 rounded-2xl p-5 hidden"><div class="grid grid-cols-3 gap-4 text-center">
+      <div id="cPrev" class="bg-primary/5 rounded-2xl p-5 hidden"><div class="grid grid-cols-3 gap-4 text-center">
         <div><div class="text-xs text-gray-500">Monthly EMI</div><div class="text-lg font-bold grad-text" id="pEMI">—</div></div>
         <div><div class="text-xs text-gray-500">Total Interest</div><div class="text-lg font-bold" id="pInt">—</div></div>
         <div><div class="text-xs text-gray-500">Total Repayment</div><div class="text-lg font-bold" id="pTot">—</div></div>
