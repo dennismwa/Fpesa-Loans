@@ -32,12 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $page_title = 'Sign In';
 require_once __DIR__ . '/../includes/header.php';
 ?>
-<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-emerald-50/30 px-4 py-12">
+<div class="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-12">
   <div class="blob w-[400px] h-[400px] bg-primary -top-40 -right-40 fixed"></div>
   <div class="w-full max-w-md relative z-10" data-aos="fade-up">
     <div class="text-center mb-8">
       <a href="/" class="inline-flex items-center gap-2.5">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center"><span class="text-white font-bold text-xl font-heading">F</span></div>
+        <div class="w-11 h-11 rounded-xl bg-primary flex items-center justify-center"><span class="text-white font-bold text-xl font-heading">F</span></div>
         <span class="text-2xl font-bold grad-text font-heading"><?= e(site_name()) ?></span>
       </a>
     </div>
