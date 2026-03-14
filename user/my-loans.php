@@ -30,7 +30,7 @@ if ($view_id):
       <?php endforeach; ?>
     </div>
   </div>
-  <div class="bg-gradient-to-br from-primary to-emerald-600 rounded-2xl p-6 text-white flex flex-col items-center justify-center">
+  <div class="bg-primary rounded-2xl p-6 text-white flex flex-col items-center justify-center">
     <h3 class="font-bold mb-4 font-heading">Repayment Progress</h3>
     <div class="relative w-28 h-28 mb-3">
       <svg class="w-28 h-28 -rotate-90" viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,.15)" stroke-width="10"/><circle cx="60" cy="60" r="50" fill="none" stroke="white" stroke-width="10" stroke-linecap="round" stroke-dasharray="<?= 2*M_PI*50 ?>" stroke-dashoffset="<?= 2*M_PI*50*(1-$progress/100) ?>"/></svg>
@@ -93,7 +93,7 @@ if ($view_id):
       <div class="p-2 rounded-lg bg-gray-50 text-center"><div class="text-[10px] text-gray-400">Balance</div><div class="text-xs font-bold"><?= fmt_money($l['balance']) ?></div></div>
       <div class="p-2 rounded-lg bg-gray-50 text-center"><div class="text-[10px] text-gray-400">EMI</div><div class="text-xs font-bold"><?= fmt_money($l['monthly_payment']) ?></div></div>
     </div>
-    <div class="w-full bg-gray-100 rounded-full h-2 mb-2"><div class="bg-gradient-to-r from-primary to-emerald-400 h-2 rounded-full transition-all" style="width:<?= $prog ?>%"></div></div>
+    <div class="w-full bg-gray-100 rounded-full h-2 mb-2"><div class="bg-primary h-2 rounded-full transition-all" style="width:<?= $prog ?>%"></div></div>
     <div class="flex justify-between text-xs text-gray-400 mb-4"><span><?= $prog ?>% repaid</span><span><?= fmt_money($l['amount_paid']) ?> / <?= fmt_money($l['total_repayment']) ?></span></div>
     <a href="/user/my-loans.php?view=<?= $l['id'] ?>" class="block text-center py-2.5 rounded-xl border border-primary/20 text-primary text-sm font-bold hover:bg-primary/5 transition">View Details</a>
   </div>
