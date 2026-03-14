@@ -3,7 +3,7 @@ require_once __DIR__.'/../config/helpers.php';$page_title='Our Loan Services';$p
 require_once __DIR__.'/../includes/header.php';require_once __DIR__.'/../includes/navbar.php';
 $db=Database::connect();$types=$db->query("SELECT * FROM loan_types WHERE is_active=1 ORDER BY sort_order")->fetchAll();
 ?>
-<section class="pt-28 pb-20 bg-gradient-to-br from-gray-50 via-white to-emerald-50/20">
+<section class="pt-28 pb-20 bg-gray-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="text-center mb-16" data-aos="fade-up"><h1 class="text-3xl sm:text-4xl font-extrabold mb-4 font-heading">Our <span class="grad-text">Loan Products</span></h1><p class="text-gray-500 max-w-xl mx-auto">Find the perfect loan for every need.</p></div>
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"><?php foreach($types as $i=>$lt):?>
