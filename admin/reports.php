@@ -24,7 +24,7 @@ if(isset($_GET['export'])){
 ?>
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
 <?php foreach([['Total Disbursed',$td,'banknote','from-primary to-emerald-400'],['Total Repaid',$tr,'check-circle','from-emerald-500 to-green-400'],['Outstanding',$tb,'alert-circle','from-amber-500 to-orange-400'],['Fee Revenue',$tf,'trending-up','from-purple-500 to-violet-400']] as $c):?>
-<div class="bg-white rounded-2xl border border-gray-100 p-5"><div class="w-10 h-10 rounded-xl bg-gradient-to-br <?=$c[3]?> flex items-center justify-center mb-3"><i data-lucide="<?=$c[2]?>" class="w-5 h-5 text-white"></i></div><div class="text-xl font-bold font-heading"><?=$c[1]?></div><div class="text-xs text-gray-400"><?=$c[0]?></div></div>
+<div class="bg-white rounded-2xl border border-gray-100 p-5"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center mb-3"><i data-lucide="<?=$c[2]?>" class="w-5 h-5 text-white"></i></div><div class="text-xl font-bold font-heading"><?=$c[1]?></div><div class="text-xs text-gray-400"><?=$c[0]?></div></div>
 <?php endforeach;?>
 </div>
 <div class="grid lg:grid-cols-2 gap-6 mb-8">
@@ -34,7 +34,7 @@ if(isset($_GET['export'])){
   <div class="bg-white rounded-2xl border border-gray-100 p-6"><h3 class="font-bold mb-5 font-heading">By Loan Type</h3><div class="space-y-3">
     <?php $ttd=(float)str_replace(['KSH',' ',','],'',$td);foreach($ts as $x):$pct=$ttd>0?round($x['t']/$ttd*100):0;?>
     <div><div class="flex justify-between text-sm mb-1"><span><?=e($x['name'])?> <span class="text-gray-400">(<?=$x['c']?>)</span></span><span class="font-bold"><?=fmt_money($x['t'])?></span></div>
-    <div class="w-full bg-gray-100 rounded-full h-2"><div class="bg-gradient-to-r from-primary to-emerald-400 h-2 rounded-full" style="width:<?=max(2,$pct)?>%"></div></div></div><?php endforeach;?></div></div>
+    <div class="w-full bg-gray-100 rounded-full h-2"><div class="bg-primary h-2 rounded-full" style="width:<?=max(2,$pct)?>%"></div></div></div><?php endforeach;?></div></div>
 </div>
 <div class="bg-white rounded-2xl border border-gray-100 p-6"><h3 class="font-bold mb-5 font-heading">Export Reports</h3><div class="flex flex-wrap gap-3">
   <a href="/admin/reports.php?export=loans" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-primary/10 text-primary text-sm font-bold hover:bg-primary/20"><i data-lucide="download" class="w-4 h-4"></i> Loans CSV</a>
