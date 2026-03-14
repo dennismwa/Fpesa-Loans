@@ -1,5 +1,6 @@
 <?php
 $_sn = site_name();
+$_logo = get_setting('logo','');
 $_email = get_setting('contact_email','info@fpesa.co.ke');
 $_phone = get_setting('contact_phone','+254 700 000 000');
 $_addr = get_setting('contact_address','Nairobi, Kenya');
@@ -15,12 +16,16 @@ try { $_db2 = Database::connect(); $_ltypes2 = $_db2->query("SELECT name, slug F
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
       <!-- Brand -->
       <div>
-        <div class="flex items-center gap-2.5 mb-5">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center">
-            <span class="text-white font-bold text-lg font-heading">F</span>
-          </div>
-          <span class="text-xl font-bold text-white font-heading"><?= e($_sn) ?></span>
-        </div>
+        <a href="/" class="flex items-center gap-2.5 mb-5 inline-flex">
+          <?php if ($_logo): ?>
+            <img src="/uploads/logos/<?= e($_logo) ?>" alt="<?= e($_sn) ?>" class="h-9">
+          <?php else: ?>
+            <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center">
+              <span class="text-white font-bold text-lg font-heading">F</span>
+            </div>
+            <span class="text-xl font-bold text-white font-heading"><?= e($_sn) ?></span>
+          <?php endif; ?>
+        </a>
         <p class="text-sm leading-relaxed text-gray-400 mb-6"><?= e(get_setting('site_description','Fast, affordable loans for everyone.')) ?></p>
         <div class="flex gap-2.5">
           <?php foreach(['facebook','twitter','instagram','linkedin'] as $_s): $_su = get_setting($_s.'_url','#'); if($_su && $_su !== '#'): ?>
