@@ -5,7 +5,7 @@ if(!$lt){header('Location: /pages/loans.php');exit;}
 $page_title=$lt['name'];$page_description=$lt['description'];
 require_once __DIR__.'/../includes/header.php';require_once __DIR__.'/../includes/navbar.php';
 ?>
-<section class="pt-28 pb-20 bg-gradient-to-br from-gray-50 via-white to-emerald-50/20">
+<section class="pt-28 pb-20 bg-gray-50">
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="grid lg:grid-cols-2 gap-12 items-start">
     <div data-aos="fade-right">
@@ -27,7 +27,7 @@ require_once __DIR__.'/../includes/header.php';require_once __DIR__.'/../include
         <div class="space-y-5">
           <div><label class="text-sm font-bold mb-2 flex justify-between">Amount <span class="text-primary" id="dAL"><?=fmt_money($lt['min_amount'])?></span></label><input type="range" id="dA" min="<?=$lt['min_amount']?>" max="<?=$lt['max_amount']?>" value="<?=$lt['min_amount']?>" step="1000" class="w-full" oninput="dC()"></div>
           <div><label class="text-sm font-bold mb-2 flex justify-between">Term <span class="text-primary" id="dTL"><?=$lt['min_term']?> months</span></label><input type="range" id="dT" min="<?=$lt['min_term']?>" max="<?=$lt['max_term']?>" value="<?=$lt['min_term']?>" class="w-full" oninput="dC()"></div>
-          <div class="bg-gradient-to-r from-primary/[.04] to-emerald-50 rounded-2xl p-5 text-center">
+          <div class="bg-primary/5 rounded-2xl p-5 text-center">
             <div class="text-sm text-gray-500 mb-1">Monthly Payment</div><div class="text-3xl font-extrabold grad-text font-heading" id="dE">—</div>
             <div class="flex justify-center gap-6 mt-3 text-xs text-gray-500"><span>Interest: <strong id="dI">—</strong></span><span>Total: <strong id="dTo">—</strong></span></div>
           </div>
