@@ -55,8 +55,8 @@ $_sn = site_name();
     body{font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
     h1,h2,h3,h4,h5,h6,.font-heading{font-family:'Outfit',sans-serif}
 
-    /* Gradient text */
-    .grad-text{background:linear-gradient(135deg,var(--pc),#10B981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    /* Accent text (no gradient) */
+    .grad-text{color:var(--pc)}
 
     /* Glass */
     .glass{background:rgba(255,255,255,.75);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.3)}
@@ -75,7 +75,7 @@ $_sn = site_name();
     .card-lift:hover{transform:translateY(-5px);box-shadow:0 20px 50px -12px rgba(13,107,63,.15)}
 
     /* Buttons */
-    .btn-primary{background:linear-gradient(135deg,var(--pc),#10B981);color:#fff;transition:all .3s}
+    .btn-primary{background:var(--pc);color:#fff;transition:all .3s}
     .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 25px -5px rgba(13,107,63,.35)}
     .btn-outline{border:2px solid var(--pc);color:var(--pc);transition:all .3s}
     .btn-outline:hover{background:var(--pc);color:#fff}
@@ -91,8 +91,8 @@ $_sn = site_name();
     .mob-menu.open{transform:translateX(0)}
 
     /* Icon box hover */
-    .icon-box{background:linear-gradient(135deg,rgba(13,107,63,.07),rgba(16,185,129,.07));transition:all .3s}
-    .icon-box:hover{background:linear-gradient(135deg,var(--pc),#10B981);color:#fff}
+    .icon-box{background:rgba(13,107,63,.08);transition:all .3s}
+    .icon-box:hover{background:var(--pc);color:#fff}
 
     /* Data table */
     .dtable th{background:#F8FAFC;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#64748B;white-space:nowrap}
