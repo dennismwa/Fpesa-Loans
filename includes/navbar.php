@@ -17,7 +17,7 @@ try { $__db = Database::connect(); $_ltypes = $__db->query("SELECT name, slug, i
         <?php if ($_logo): ?>
           <img src="/uploads/logos/<?= e($_logo) ?>" alt="<?= e($_sn) ?>" class="h-9">
         <?php else: ?>
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center shadow-sm">
+          <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center shadow-sm">
             <span class="text-white font-bold text-lg font-heading">F</span>
           </div>
           <span class="text-xl font-bold font-heading"><span class="grad-text"><?= e($_sn) ?></span></span>
