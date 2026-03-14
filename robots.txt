@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /user/
+Disallow: /config/
+Disallow: /uploads/
+Disallow: /auth/logout.php
+Sitemap: /sitemap.xml
