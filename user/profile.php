@@ -30,7 +30,7 @@ $st = $db->prepare("SELECT * FROM users WHERE id=?"); $st->execute([$_u['id']]);
 <div class="grid lg:grid-cols-3 gap-6">
   <div class="bg-white rounded-2xl border border-gray-100 p-6" data-aos="fade-up">
     <div class="text-center mb-6">
-      <div class="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center text-white text-2xl font-bold mx-auto mb-3"><?= strtoupper($u['full_name'][0]) ?></div>
+      <div class="w-20 h-20 rounded-full bg-primary flex items-center justify-center text-white text-2xl font-bold mx-auto mb-3"><?= strtoupper($u['full_name'][0]) ?></div>
       <h3 class="font-bold text-lg font-heading"><?= e($u['full_name']) ?></h3>
       <p class="text-sm text-gray-400"><?= e($u['email']) ?></p>
     </div>
