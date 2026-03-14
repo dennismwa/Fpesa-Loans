@@ -16,7 +16,7 @@ require_once __DIR__ . '/../includes/header.php';
   <aside id="aSB" class="fixed lg:sticky top-0 left-0 h-screen w-[260px] bg-dark text-gray-400 z-40 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col overflow-y-auto">
     <div class="p-5 border-b border-white/5">
       <a href="/admin/dashboard.php" class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center"><span class="text-white font-bold font-heading">F</span></div>
+        <div class="w-8 h-8 rounded-lg bg-primary flex items-center justify-center"><span class="text-white font-bold font-heading">F</span></div>
         <div><span class="text-base font-bold text-white font-heading"><?= e(site_name()) ?></span><div class="text-[9px] text-gray-600 uppercase tracking-[.15em]">Admin Panel</div></div>
       </a>
     </div>
